@@ -11,20 +11,25 @@ CLIENT_SECRET = "1c50b1c4917046ab8e49ec56670b1e4a"
 
 auth = SpotifyOAuth(client_id= CLIENT_ID, client_secret= CLIENT_SECRET,
                     redirect_uri= "http://example.com",
-                    scope= "playlist-modify-private")
+                    scope= "playlist-modify-private",
+                    show_dialog= True,
+                    cache_path = "token.txt",
+                    username= "VSR")
 
-year = input("Which year do you want to travel to? Type the data in this format YYYY-MM-DD : ")
-billboard = requests.get(URL)
+sp = spotipy.Spotify(auth_manager= auth)
 
-content = billboard.text
+# year = input("Which year do you want to travel to? Type the data in this format YYYY-MM-DD : ")
+# billboard = requests.get(URL)
 
-soup = BeautifulSoup(content, "html.parser")
+# content = billboard.text
 
-movies = soup.find_all(name= "h3", id = "title-of-a-story")
+# soup = BeautifulSoup(content, "html.parser")
 
-for i in movies:
-    print(i.getText())
+# movies = soup.find_all(name= "h3", id = "title-of-a-story")
 
+# for i in movies:
+#     print(i.getText())
 
+user_id = sp.current_user()["id"]
 
 
