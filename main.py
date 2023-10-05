@@ -11,17 +11,17 @@ CLIENT_SECRET = "1c50b1c4917046ab8e49ec56670b1e4a"
 
 #spotify authentication
 
-auth = SpotifyOAuth(client_id= CLIENT_ID, client_secret= CLIENT_SECRET,
-                    redirect_uri= "http://example.com",
-                    scope= "playlist-modify-private",
-                    show_dialog= True,
-                    cache_path = "token.txt",
-                    username= "VSR")
+# auth = SpotifyOAuth(client_id= CLIENT_ID, client_secret= CLIENT_SECRET,
+#                     redirect_uri= "http://example.com",
+#                     scope= "playlist-modify-private",
+#                     show_dialog= True,
+#                     cache_path = "token.txt",
+#                     username= "VSR")
 
-sp = spotipy.Spotify(auth_manager= auth)
+# sp = spotipy.Spotify(auth_manager= auth)
 
-user_id = sp.current_user()["id"]
-print(user_id)
+# user_id = sp.current_user()["id"]
+# print(user_id)
 
 #scraping top 100 songs from the billboard
 
