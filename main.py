@@ -25,7 +25,7 @@ CLIENT_SECRET = "1c50b1c4917046ab8e49ec56670b1e4a"
 
 #scraping top 100 songs from the billboard
 
-year = input("Which year do you want to travel to? Type the data in this format YYYY-MM-DD : ")
+date = input("Which year do you want to travel to? Type the data in this format YYYY-MM-DD : ")
 billboard = requests.get(URL)
 
 content = billboard.text
@@ -33,9 +33,16 @@ content = billboard.text
 soup = BeautifulSoup(content, "html.parser")
 
 movies = soup.find_all(name= "h3", id = "title-of-a-story")
+list_of_movies = []
 
 for i in movies:
-    print(i.getText())
+    a = i.getText()
+    list_of_movies.append(a.strip())
+    
+    
+print(list_of_movies)
+
+
 
 
 
