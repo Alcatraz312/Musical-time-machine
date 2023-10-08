@@ -1,1 +1,3 @@
-<p align = "center"><h1>Musical Time Machine</h1></p>
+<p align = "center">
+  <img src = "C:\Users\ratho\Downloads\Musical_time_machine.png"/>
+</p>
