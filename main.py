@@ -3,7 +3,7 @@ import requests
 from pprint import pprint
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from client import CLIENT_ID, CLIENT_SECRET
+from client import CLIENT_ID, CLIENT_SECRET    #gitignored 
 
 date = input("Which year do you want to travel to? Type the data in this format YYYY-MM-DD : ")
 URL = "https://www.billboard.com/charts/hot-100/" + date
