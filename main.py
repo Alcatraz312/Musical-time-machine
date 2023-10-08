@@ -24,17 +24,18 @@ user_id = sp.current_user()["id"]
 
 #scraping top 100 songs from the billboard
 
-
 billboard = requests.get(URL)
 
 content = billboard.text
 
 soup = BeautifulSoup(content, "html.parser")
 
-movies = soup.find_all(name= "h3", id = "title-of-a-story")
+songs = soup.select("li ul li h3")
 list_of_songs = []
 
-for i in movies:
+#creating a list of song uris
+
+for i in songs:
     a = i.getText()
     list_of_songs.append(a.strip())
     
@@ -54,6 +55,7 @@ for song in list_of_songs:
 
 print(song_uri)
 print(f"{skipped} songs skipped!")
+print(len(song_uri))
 
 
 
