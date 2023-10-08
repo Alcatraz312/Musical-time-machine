@@ -52,8 +52,12 @@ for song in list_of_songs:
     except IndexError:
         skipped +=1 
 
+#creating a playlist and adding songs to it
 
-playlist = sp.user_playlist_create(user= user_id, name = "2020-02-02 Billboard 100", description= "test album", public= False)
+playlist = sp.user_playlist_create(user= user_id, name = f"{date} Billboard 100", description= "test album", public= False)
+sp.playlist_add_items(playlist_id= playlist["id"], items= song_uri)
+
+print(f"Skipped {skipped} songs as they arent available on spotify")
 
 
 
