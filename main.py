@@ -53,9 +53,7 @@ for song in list_of_songs:
         skipped +=1 
 
 
-print(song_uri)
-print(f"{skipped} songs skipped!")
-print(len(song_uri))
+playlist = sp.user_playlist_create(user= user_id, name = "2020-02-02 Billboard 100", description= "test album", public= False)
 
 
 
