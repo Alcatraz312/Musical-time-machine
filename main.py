@@ -3,11 +3,12 @@ import requests
 from pprint import pprint
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+from client import CLIENT_ID, CLIENT_SECRET
 
 date = input("Which year do you want to travel to? Type the data in this format YYYY-MM-DD : ")
 URL = "https://www.billboard.com/charts/hot-100/" + date
-CLIENT_ID = "3327e5f459d44dccaf9cf5041ac1fd4d"
-CLIENT_SECRET = "1c50b1c4917046ab8e49ec56670b1e4a"
+CLIENT_ID = CLIENT_ID
+CLIENT_SECRET = CLIENT_SECRET
 
 #spotify authentication
 
