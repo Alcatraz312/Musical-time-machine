@@ -40,6 +40,7 @@ for i in movies:
     
 year = date.split("-")[0]
 song_uri = []
+skipped = 0
 
 for song in list_of_songs:
     result = sp.search(q = f"track : {song} year : {year}", type= "track")
@@ -48,10 +49,12 @@ for song in list_of_songs:
         song_uri.append(uri)
 
     except IndexError:
-        print(f"{song} doesn't exist in Spotify. Skipped.")
+        skipped +=1 
 
-    
+
 print(song_uri)
+print(f"{skipped} songs skipped!")
+
 
 
 
