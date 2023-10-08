@@ -17,7 +17,7 @@ auth = SpotifyOAuth(client_id= CLIENT_ID, client_secret= CLIENT_SECRET,
                     scope= "playlist-modify-private",
                     show_dialog= True,
                     cache_path = "token.txt",
-                    username= "VSR")
+                    username= "Your spotify username")
 
 sp = spotipy.Spotify(auth_manager= auth)
 
