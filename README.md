@@ -31,18 +31,31 @@ git clone https://github.com/Alcatraz312/Musical-time-machine.git
 ```python
 cd Musical-time-machine
 ```
+3. Create environment
+```python
+python -m venv time_machine
+```
 
-3. Install the required python packages using pip:
+4. Switch to created environment
+    Linux:
+    ```bash
+    $ . time_machine/bin/activate
+    ```
+    Windows:
+    ```
+    time_machine/Scripts/activate
+    ```
 
+5. Upgrade pip
 ```python
-pip install bs4
+pip install --upgrade pip
 ```
-```python
-pip install Spotipy
+
+6. Install requirements.txt
+```python 
+pip install -r requirements.txt
 ```
-```python
-pip install requests
-```
+
 
 ## Configuration
 To use this program, you need to set up your Spotify API credentials:
